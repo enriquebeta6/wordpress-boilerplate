@@ -1,0 +1,47 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+.d {
+  &-xs {
+    &-none {
+      display: none;
+    }
+  }
+}
+
+.justify {
+  &-content {
+    &-xs {
+      &-center {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.flex {
+  &-xs {
+    &-column {
+      flex-direction: column;
+    }
+  }
+}
+
+.mb {
+  &-xs {
+    &-4 {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.order {
+  &-xs {
+    @for $i from 1 through 5 {
+      &-#{$i} {
+        order: $i;
+      }
+    }
+  }
+}

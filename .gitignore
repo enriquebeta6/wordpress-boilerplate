@@ -1,0 +1,68 @@
+
+# Created by https://www.gitignore.io/api/macos,wordpress
+# Edit at https://www.gitignore.io/?templates=macos,wordpress
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+.vscode/
+
+.eslintcache
+### Plugins
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### WordPress ###
+
+# ignore everything in the "wp-content" directory, except:
+# "mu-plugins", "plugins", "themes" directory
+src/wp-content/*
+!src/wp-content/mu-plugins/
+!src/wp-content/plugins/
+!src/wp-content/uploads/
+!src/wp-content/themes/
+
+# ignore these plugins
+src/wp-content/plugins/hello.php
+src/wp-content/plugins/akismet/
+
+
+# ignore specific themes
+src/wp-content/themes/twenty*/
+
+# ignore node dependency directories
+node_modules/
+
+# ignore log files and databases
+*.log
+#*.sql
+*.sqlite
+**/*/.DS_Store
+
+# ignore directories
+design/
+
+# Add the dist/build folder
+# src/wp-content/themes/theme-name/dist

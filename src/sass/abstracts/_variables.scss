@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+$font-default: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',
+  'Helvetica', 'Arial', sans-serif !default;
+
+$social-links: (
+  'facebook.com': '\f39e',
+  'instagram.com': '\f16d',
+  'twitter.com': '\f099',
+  'linkedin.com': '\f08c',
+  'google.com': '\f0d5',
+);

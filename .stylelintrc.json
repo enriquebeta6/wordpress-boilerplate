@@ -1,0 +1,18 @@
+{
+  "plugins": ["stylelint-selector-bem-pattern"],
+  "extends": "stylelint-config-sass-guidelines",
+  "ignoreFiles": ["node_module"],
+  "rules": {
+    "plugin/selector-bem-pattern": {
+      "componentName": "[A-Z]+",
+      "componentSelectors": {
+        "initial": "^\\.{componentName}(?:-[a-z]+)?$",
+        "combined": "^\\.combined-{componentName}-[a-z]+$"
+      },
+      "utilitySelectors": "^\\.util-[a-z]+$"
+    },
+    "max-nesting-depth": 5,
+    "selector-max-id": 1,
+    "selector-no-qualifying-type": null
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "branchNameLinter": {
+    "prefixes": ["feature", "hotfix", "bugfix", "release"],
+    "suggestions": {
+      "features": "feature",
+      "feat": "feature",
+      "fix": "hotfix",
+      "bug": "bugfix",
+      "releases": "release"
+    },
+    "banned": ["wip"],
+    "skip": ["skip-ci", "develop"],
+    "disallowed": ["master", "main"],
+    "seperator": "/",
+    "msgBranchBanned": "Branches with the name \"%s\" are not allowed.",
+    "msgBranchDisallowed": "Pushing to \"%s\" is not allowed, use a pull requests.",
+    "msgPrefixNotAllowed": "Branch prefix \"%s\" is not allowed.",
+    "msgPrefixSuggestion": "Instead of \"%s\" try \"%s\".",
+    "msgSeperatorRequired": "Branch \"%s\" must contain a seperator \"%s\"."
+  }
+}

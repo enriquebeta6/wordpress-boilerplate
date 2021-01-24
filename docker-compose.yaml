@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+  wordpress:
+    build:
+      context: .
+      dockerfile: ./config/Dockerfile
+    container_name: wordpress-boilerplate
+    restart: "no"
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src/wp-content:/var/www/html/wp-content/
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: admin
+      WORDPRESS_DB_NAME: admin
+      XDEBUG_CONFIG: remote_host=host.docker.internal
+        remote_port=9000
+        remote_enable=1
+    privileged: true
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    container_name: mysql
+    restart: "no"
+    environment:
+      MYSQL_DATABASE: wordpress-db
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+      MYSQL_RANDOM_ROOT_PASSWORD: "1"
